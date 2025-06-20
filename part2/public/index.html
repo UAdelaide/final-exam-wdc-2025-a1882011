@@ -49,9 +49,9 @@
     <!--add login form-->
     <form action="/api/users/login" method="post">
       <label for="email">Email: </label>
-      <input type="text" id="email" name="email"><br><br>
+      <input type="text" id="email" v-model="email"><br><br>
       <label for="password">Password: </label>
-      <input type="text" id="password" name="password"><br><br>
+      <input type="text" id="password" v="password"><br><br>
       <input type="submit" value="Log in">
     </form>
     <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
