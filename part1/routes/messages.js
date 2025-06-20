@@ -34,8 +34,7 @@ router.get('/walkers/summary', async(req, res) => {
         SELECT U.username AS walker_username,
                COUNT(R.rating_id) AS total_ratings,
                AVG(R.rating_id) AS average_rating,
-               COUNT(W.request_id) AS completed_walks From Users U
-               
+               COUNT(W.request_id) AS completed_walks From Users
         `)
 })
 module.exports = router;
