@@ -15,7 +15,6 @@
         img{
             width: 1000px;
             margin-top: 50px;
-
         }
     </style>
 </head>
@@ -23,11 +22,6 @@
 <body>
     <div id="app">
         {{ message }}
-
-        <div v-if="Dimages">
-            <img :src="Dimages" alt="random">
-            <button @click="buttondog">Next</button>
-        </div>
     </div>
     <script>
         const app = Vue.createApp({
@@ -38,16 +32,15 @@
                 };
             },
             method: {
-                buttonDog(){
-                    fetch('https://dog.ceo/api/breeds/image/random')
-                        .then(res => res.json())
-                        .then(data => {
-                            this.Dimages = data.message;
-                        });
-                }
+                fetch('https://dog.ceo/api/breeds/image/random')
+                    .then(res => res.json())
+                    .then(data => {
+                        this.Dimages = data.message;
+                    });
             }
-        });
-        app.mount("#app")
+        }
+    });
+    app.mount("#app")
     </script>
 
 
