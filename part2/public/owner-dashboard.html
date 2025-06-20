@@ -117,6 +117,7 @@
             message.value = '';
           }
         }
+        //logout button
         async function logout() {
           try{
             await  fetch('/api/users/logout', {method: 'POST'});
