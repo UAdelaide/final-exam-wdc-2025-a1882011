@@ -32,12 +32,12 @@
             data(){
                 return{
                     message: "Weleocm Dog Walk"
-                    Dimages ''
+                    Dimages: ''
                 };
-            }
-        method: {
-            fetch('https://dog.ceo/api/breeds/image/random')
-            .then(res => res.json())
+            },
+            method: {
+                fetch('https://dog.ceo/api/breeds/image/random')
+                    .then(res => res.json())
             .then(data => {
                 this.Dimages = data.message;
             });
