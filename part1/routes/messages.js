@@ -12,6 +12,6 @@ router.get('/dogs',async(req, res) => {
 });
 
 router.get('/walkrequests/open',async(req, res) => {
-    cons
+    const[rows] = await db.query()
 })
 module.exports = router;
