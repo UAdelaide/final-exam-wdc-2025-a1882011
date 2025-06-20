@@ -63,10 +63,10 @@ router.post('/logout', (req, res) =>{
 
 //add dog name
 router.get('/dogs/dogname', async(req, res) => {
-  const user_id = req.session.usesr?.user_id;
+  const userid = req.session.usesr?.user_id;
   try{
     const[rows] = await db.query("SELECT dog_id, name FROM Dogs WHERE owner_id =?,",
-      
+      [userid]
     )
   }
 })
