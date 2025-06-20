@@ -22,7 +22,7 @@ router.get('/walkrequests/open',async(req, res) => {
         res.json(rows);
 });
 
-router.post('/messages', async(req, res) => {
+router.post('/walkers/summary', async(req, res) => {
     const {request_id, walker_id, owner_id, rating, comments} = req.body;
     await db.query(`INSERT INTO WalkRatings(request_id, walker_id, owner_id, rating, comments)
         VALUES(?,?,?,?,?)`,[request_id, walker_id, owner_id, rating, comments]);
