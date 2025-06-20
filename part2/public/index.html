@@ -71,7 +71,8 @@
       methods:{
         async login(){
           const res=await fetch('/api/users/login', {
-            met
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' }
           })
         }
       }
