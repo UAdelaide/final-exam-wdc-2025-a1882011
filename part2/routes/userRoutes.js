@@ -61,4 +61,7 @@ router.post('/logout', (req, res) =>{
   res.clearCookie('connect.sid');
 })
 
+//add dog name
+
+
 module.exports = router;
