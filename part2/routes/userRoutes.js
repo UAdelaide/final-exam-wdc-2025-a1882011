@@ -69,8 +69,8 @@ router.get('/dogs/dogname', async(req, res) => {
       [userid]);
     res.json(rows);
   }catch (error) {
-    res.status(500).json({error: "Failed"})
+    res.status(500).json({error: "Failed"});
   }
-})
+});
 
 module.exports = router;
