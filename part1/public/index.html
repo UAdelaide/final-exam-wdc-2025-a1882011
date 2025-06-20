@@ -68,8 +68,8 @@
                     fetch("https://dog.ceo/api/breed/{breed}/images/random")
                        .then(res => res.json())
                        .then(data => {
-                        
-                       })
+                           this.dogimages = data.message;
+                       });
                 }
             },
             mounted() {
