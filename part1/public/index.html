@@ -18,6 +18,10 @@
 <body>
     <div id="app">
         {{ message }}
+
+        <div v-if="dogimages">
+            <img src="dogimages" alt="dog"
+        </div>
     </div>
     <script>
         const app = Vue.createApp({
