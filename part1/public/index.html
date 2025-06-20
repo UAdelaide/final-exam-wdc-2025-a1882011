@@ -65,9 +65,7 @@
                 },
                 searchbreed() {
                     const breed = this.inpText;
-                    fetch("https://dog.ceo/api/breed/
-affenpinscher
-/images/random")
+                    fetch("https://dog.ceo/api/breed/{breed}/images/random")
                 }
             },
             mounted() {
