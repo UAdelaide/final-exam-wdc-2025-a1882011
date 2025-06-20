@@ -137,8 +137,6 @@
           const res=await fetch('/api/dogs/dogsname');
           dogs.value = await res.json();
         }
-
-        }
         onMounted(() => {
           loadWalks();
           Dogs();
