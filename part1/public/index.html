@@ -12,10 +12,6 @@
             background-color: lightyellow;
             color:yellow;
         }
-        img{
-            width: 1000px;
-            margin-top: 50px;
-        }
     </style>
 </head>
 
@@ -28,19 +24,10 @@
             data(){
                 return{
                     message: "Weleocm Dog Walk"
-                    Dimages: ''
-                };
-            },
-            method: {
-                fetch('https://dog.ceo/api/breeds/image/random')
-                    .then(res => res.json())
-                    .then(data => {
-                        this.Dimages = data.message;
-                    });
+                }
             }
-        }
-    });
-    app.mount("#app")
+        })
+        app.mount("#app")
     </script>
 
 
