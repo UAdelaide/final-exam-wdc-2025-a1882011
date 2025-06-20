@@ -7,5 +7,6 @@ var
 
 router.get('./items',async(req, res) => {
     const [rows] =await db.query(`
-        SELECT `)
+        SELECT Dogs.name AS dog_name,
+        `)
 })
