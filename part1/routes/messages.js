@@ -15,6 +15,7 @@ router.get('/walkrequests/open',async(req, res) => {
     const[rows] = await db.query(`
         SELECT WalkRequest.request_id, Dogs.name As dog_name, WalkRequests.requested_time,
         WalkRequests.duration_minutes, WalkRequests.location, Users.username As username
-        `)
+        From WalkRequests
+         `)
 })
 module.exports = router;
