@@ -37,6 +37,9 @@ router.get('/walkers/summary', async(req, res) => {
                COUNT(wr.request_id) AS completed_walks From Users U
         JOIN WalkRequests wr ON u.user_id = wr.walker_id
         JOIN WalkRatings r on wr.request_id = r.request_id
+        WHERE wr.status = 'completed'
+        GROUP BY
+        U.username;
         `)
 })
 module.exports = router;
