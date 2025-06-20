@@ -133,7 +133,7 @@
         }
         //change dog name
         const dogs = ref([]);
-        async function Dogs(){
+        async function menudogs(){
           const res=await fetch('/api/users/dogs/dogsname');
           dogs.value = await res.json();
         }
