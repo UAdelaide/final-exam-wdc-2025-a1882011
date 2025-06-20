@@ -10,4 +10,6 @@ router.get('/dogs',async(req, res) => {
         Join Users ON Dogs.owner_id = Users.user_id`);
         res.json(rows);
 });
+
+router.get('')
 module.exports = router;
