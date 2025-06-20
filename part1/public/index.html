@@ -19,7 +19,7 @@
             height: 900px;
             margin-top: 40px;
         }
-        .button{
+        .buttons{
             text-align: right;
         }
     </style>
@@ -32,8 +32,9 @@
         <div v-if="dogimages">
             <img :src="dogimages" alt="random">
         </div>
-        <div
+        <div class="buttons">
         <button @click="dogbutton">NEXT</button>
+        </div>
     </div>
     <script>
         const app = Vue.createApp({
