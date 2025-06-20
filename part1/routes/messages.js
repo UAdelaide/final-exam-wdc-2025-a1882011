@@ -10,5 +10,8 @@ router.get('./items',async(req, res) => {
         SELECT Dogs.name AS dog_name,
         Dogs.size, Users.username AS owner_username
         From Dogs
-        `)
+        Join Users ON Dogs.owner_id = Users.user_id`);
+        res.json(rows);
+} catch(err){
+    res.status()
 })
