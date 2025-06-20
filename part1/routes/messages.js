@@ -16,6 +16,7 @@ router.get('/walkrequests/open',async(req, res) => {
         SELECT WalkRequest.request_id, Dogs.name As dog_name, WalkRequests.requested_time,
         WalkRequests.duration_minutes, WalkRequests.location, Users.username As username
         From WalkRequests
-        Join Dogs ON walkRequests.dog_id`)
+        Join Dogs ON walkRequests.dog_id=Dogs.dog_id
+        Join Users ON Dogs.owner_id,`)
 })
 module.exports = router;
