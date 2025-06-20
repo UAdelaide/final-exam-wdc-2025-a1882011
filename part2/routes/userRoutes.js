@@ -17,7 +17,8 @@ router.post('/register', async (req, res) => {
   const { username, email, password, role } = req.body;
    console.log("📩 Login request received");
    console.log("🧪 Email:", email);
-   
+    console.log("🔐 Password:", password);
+
 
   try {
     const [result] = await db.query(`
