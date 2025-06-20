@@ -80,7 +80,7 @@
               password: this.password
             })
           });
-          if(role ==='owner'){
+          if(data.user.role ==='owner'){
             window.location.href = '/owner-dashboard.html';
           } else if (role === 'walker'){
             window.location.href = 'walker-dashboard.html'
