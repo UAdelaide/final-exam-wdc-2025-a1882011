@@ -121,7 +121,6 @@
             error.value = err.message;
             message.value = '';
           }
-
         }
         //logout button
         async function logout() {
@@ -131,6 +130,12 @@
           }catch(err){
             error.value = err.message;
           }
+        }
+        //change dog name
+        const dogs = ref([]);
+        async function loadDogs(){
+          const res=await fetch('/api/users/dogs/dogsname');
+          dogs.value = await res.json();
         }
         onMounted(() => {
           loadWalks();
