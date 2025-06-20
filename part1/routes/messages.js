@@ -22,9 +22,7 @@ router.get('/walkrequests/open',async(req, res) => {
         res.json(rows);
 });
 
-router.get('/walkers/summary', async(req, res) => {
-    const[rows] = await db.query(`
-        SELECT Users.username AS walker_username From WalkRatings
-         `)
+router.post('/messages', async(req, res) => {
+    const {}
 })
 module.exports = router;
