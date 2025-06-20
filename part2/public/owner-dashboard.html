@@ -135,6 +135,7 @@
         const dogs = ref([]);
         async function Dogs(){
           const res=await fetch('/api/dogs/dogsname');
+          console.log(dogs.value);
           dogs.value = await res.json();
         }
         onMounted(() => {
