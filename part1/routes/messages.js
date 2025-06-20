@@ -6,5 +6,6 @@ var
 var
 
 router.get('./items',async(req, res) => {
-    const [rows] =await db.query(``)
+    const [rows] =await db.query(`
+        SELECT `)
 })
