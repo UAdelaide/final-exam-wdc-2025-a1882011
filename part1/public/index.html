@@ -20,15 +20,16 @@
         {{ message }}
 
         <div v-if="dogimages">
-            <img src="dogimages" alt="dog"
+            <img src="dogimages" alt="random">
         </div>
     </div>
     <script>
         const app = Vue.createApp({
             data(){
                 return{
-                    message: "Weleocm Dog Walk"
-                }
+                    message: "Weleocm Dog Walk",
+                    dogimages: ""
+                };
             }
         })
         app.mount("#app")
