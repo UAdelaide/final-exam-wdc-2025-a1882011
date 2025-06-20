@@ -63,7 +63,7 @@ router.post('/logout', (req, res) =>{
 
 //add dog name
 router.get('/dogs/dogname', async(req, res) => {
-  
+  const user_id = req.session.usesr
 })
 
 module.exports = router;
