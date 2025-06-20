@@ -6,7 +6,7 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-//add
+//add form for tras
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/public')));
 
