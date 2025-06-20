@@ -5,9 +5,8 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
-app.use(express.json());
-//add to transger form
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Routes
