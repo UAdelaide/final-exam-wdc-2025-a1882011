@@ -78,7 +78,9 @@
               passowrd: this.passowrd
             })
           });
-          if(rol)
+          if(role ==='owner'){
+            window.location.href = '/owner-dashboard.html'
+          }
         }
       }
     }).mount('#app');
