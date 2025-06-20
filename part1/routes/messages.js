@@ -39,7 +39,6 @@ router.get('/walkers/summary', async(req, res) => {
         JOIN WalkRatings r on wr.request_id = r.request_id
         WHERE wr.status = 'completed'
         GROUP BY
-        U.username;
-        `)
-})
+        U.username`);
+});
 module.exports = router;
