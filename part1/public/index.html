@@ -66,6 +66,10 @@
                 searchbreed() {
                     const breed = this.inpText;
                     fetch("https://dog.ceo/api/breed/{breed}/images/random")
+                       .then(res => res.json())
+                       .then(data => {
+                        
+                       })
                 }
             },
             mounted() {
