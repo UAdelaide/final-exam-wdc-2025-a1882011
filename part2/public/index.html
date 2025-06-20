@@ -47,7 +47,7 @@
     <h1 class="mb-4 text-primary">{{ message }}</h1>
     <p class="lead">Connect with trusted walkers for your beloved dog!</p>
     <!--add login form-->
-    <form action="/api/users/login" method="post">
+    <form @submit.prevent="login">
       <label for="email">Email: </label>
       <input type="text" id="email" name="email"><br><br>
       <label for="password">Password: </label>
