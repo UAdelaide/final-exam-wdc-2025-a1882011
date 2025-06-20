@@ -12,6 +12,7 @@
             background-color: lightyellow;
             color:yellow;
         }
+        
     </style>
 </head>
 
@@ -38,9 +39,8 @@
                    .then(data => {
                     this.dogimages = data.message;
                    });
-
             }
-        })
+        });
         app.mount("#app")
     </script>
 
