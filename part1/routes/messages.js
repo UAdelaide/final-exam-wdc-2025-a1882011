@@ -16,9 +16,9 @@ router.get('/walkrequests/open',async(req, res) => {
         SELECT  WalkRequests.request_id, Dogs.name As dog_name,  WalkRequests.requested_time,
         WalkRequests.duration_minutes,  WalkRequests.location, Users.username As owner_username
         From  WalkRequests
-        Join Dogs ON walkRequests.dog_id=Dogs.dog_id
+        Join Dogs ON  WalkRequests.dog_id=Dogs.dog_id
         Join Users ON Dogs.owner_id = Users.user_id
-        Where WalkRequests.status = 'open'`);
+        Where  WalkRequests.status = 'open'`);
         res.json(rows);
 });
 module.exports = router;
