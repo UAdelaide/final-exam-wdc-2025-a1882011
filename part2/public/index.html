@@ -70,7 +70,9 @@
       },
       methods:{
         async login(){
-          const res=
+          const res=await fetch('/api/users/login', {
+            met
+          })
         }
       }
     }).mount('#app');
