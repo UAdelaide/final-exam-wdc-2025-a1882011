@@ -74,9 +74,11 @@
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.strignify({
-              email:
+              email: this.email,
+              passowrd: this.passowrd
             })
-          })
+          });
+          if(rol)
         }
       }
     }).mount('#app');
