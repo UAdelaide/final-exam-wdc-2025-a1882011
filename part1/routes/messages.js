@@ -40,5 +40,6 @@ router.get('/walkers/summary', async(req, res) => {
         WHERE wr.status = 'completed'
         GROUP BY
         U.username`);
+        res.json(rows);
 });
 module.exports = router;
