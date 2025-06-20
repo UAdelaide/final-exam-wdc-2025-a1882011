@@ -19,6 +19,10 @@
             margin-top: 70px;
             color: brown;
         }
+        p{
+            font-size: 18px;
+            color: grey;
+        }
         img{
             width: 1000px;
             height: 900px;
@@ -36,6 +40,7 @@
 
         <div v-if="dogimages">
             <h1>images</h1>
+            <p>Which do you like?</p>
             <img :src="dogimages" alt="random">
         </div>
         <div class="buttons">
