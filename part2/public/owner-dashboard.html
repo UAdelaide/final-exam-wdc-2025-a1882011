@@ -135,8 +135,7 @@
         const dogs = ref([]);
         async function Dogs(){
           const res=await fetch('/api/dogs/dogsname');
-           dogs.value = await res.json();
-
+          dogs.value = await res.json();
         }
 
         }
