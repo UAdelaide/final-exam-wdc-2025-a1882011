@@ -18,6 +18,7 @@ router.get('/walkrequests/open',async(req, res) => {
         From WalkRequests
         Join Dogs ON walkRequests.dog_id=Dogs.dog_id
         Join Users ON Dogs.owner_id = Users.user_id
-        Where WalkRequests.status = "`)
-})
+        Where WalkRequests.status = 'open'`);
+        res.json(rows);
+}
 module.exports = router;
