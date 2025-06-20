@@ -32,9 +32,9 @@ router.post('/message', async(req, res) => {
 router.get('/walkers/summary', async(req, res) => {
     const[rows] = await db.query(`
         SELECT U.username AS walker_username,
-               COUNT(wr.rating_id) AS total_ratings,
-               AVG(R.rating_id) AS average_rating,
-               COUNT(W.request_id) AS completed_walks From Users
+               COUNT(r.rating_id) AS total_ratings,
+               AVG(r.rating_id) AS average_rating,
+               COUNT(wr.request_id) AS completed_walks From Users 
         `)
 })
 module.exports = router;
