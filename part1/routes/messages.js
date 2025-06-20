@@ -21,4 +21,8 @@ router.get('/walkrequests/open',async(req, res) => {
         Where  WalkRequests.status = 'open'`);
         res.json(rows);
 });
+
+router.get('/walkers/summary', async(req, res) => {
+    
+})
 module.exports = router;
