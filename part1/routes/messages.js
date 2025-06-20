@@ -31,6 +31,6 @@ router.post('/message', async(req, res) => {
 
 router.get('/walkers/summary', async(req, res) => {
     const[rows] = await db.query(`
-        SELECT  `)
+        SELECT Users.username AS walker_username,`)
 })
 module.exports = router;
