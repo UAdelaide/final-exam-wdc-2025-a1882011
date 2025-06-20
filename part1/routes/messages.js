@@ -23,6 +23,7 @@ router.get('/walkrequests/open',async(req, res) => {
 });
 
 router.post('/messages', async(req, res) => {
-    const {request_id, walker_id, owner_id, rating, comments} = re
-})
+    const {request_id, walker_id, owner_id, rating, comments} = req.body;
+    awai
+});
 module.exports = router;
