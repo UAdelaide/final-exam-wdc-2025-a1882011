@@ -75,6 +75,7 @@
             message.value = '';
           }
         }
+        <!--l-->
         async function logout() {
           try{
             await  fetch('/api/users/logout', {method: 'POST'});
@@ -82,6 +83,7 @@
           }catch(err){
             error.value = err.message;
           }
+        }
 
 
         onMounted(() => {
