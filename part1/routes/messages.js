@@ -25,6 +25,8 @@ router.get('/walkrequests/open',async(req, res) => {
 router.get('/walkers/summary', async(req, res) => {
     const[rows] = await db.query(`
         SELECT WalkRatings.walker_id AS username,
-        WalkRatings.total_ratings, WalkRatings.average_rating, WalkRatings.completed_walks`)
+        WalkRatings.total_ratings, WalkRatings.average_rating, WalkRatings.completed_walks
+        From WalkRatings
+        Join Users ON `)
 })
 module.exports = router;
