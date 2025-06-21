@@ -91,7 +91,12 @@
 
         //logcin function
         async function login(email, password) {
-          
+          const res = await fetch('/api/users/login',{
+            method: 'POST',
+            
+
+          })
+
         }
 
         async function loadWalks() {
