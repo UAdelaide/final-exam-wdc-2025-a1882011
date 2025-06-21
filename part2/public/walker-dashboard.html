@@ -56,14 +56,14 @@
             error.value = err.message;
           }
         }
-
+        //question16 - 
         async function applyToWalk(requestId) {
           try {
             const walkerid = await getCurrentUser();
             await fetch(`/api/walkrequestst/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ request_id: requestid, walker_id: wal })
+              body: JSON.stringify({ request_id: requestid, walker_id: walkerid })
             });
             const result = await res.json();
 
