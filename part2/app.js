@@ -4,13 +4,6 @@ require('dotenv').config();
 
 const session = require('express-session');
 const app = express();
-//save user info
-app.use(session({
-    secret: 'scretkey',
-    resave: false,
-    saveUninitialized: true,
-    cooki: { secure:false}
-}));
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
