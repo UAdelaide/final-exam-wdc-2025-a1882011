@@ -3,6 +3,15 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
+//
+const session = require('express-session');
+app.use(session({
+  secret: 'scretkey',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false }
+}));
+
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
