@@ -3,7 +3,7 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
-//
+//session
 const session = require('express-session');
 app.use(session({
   secret: 'scretkey',
