@@ -14,8 +14,6 @@ const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 //add dogroutes
 const dogRoutes = require('./routes/dogRoutes');
-const { createSecretKey } = require('crypto');
-
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
