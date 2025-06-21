@@ -21,14 +21,5 @@ app.use('/api/users', userRoutes);
 //add dogroutes
 app.use('/api/dogs', dogRoutes);
 
-//
-const session = require('express-session');
-app.use(session({
-    secret:'secretkey',
-    resave: false,
-    saveUninitialized:true
-}));
-
-
 // Export the app instead of listening here
 module.exports = app;
