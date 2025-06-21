@@ -22,6 +22,8 @@ app.use('/api/users', userRoutes);
 app.use('/api/dogs', dogRoutes);
 
 //
+const session = require('express-session');
+
 
 
 // Export the app instead of listening here
