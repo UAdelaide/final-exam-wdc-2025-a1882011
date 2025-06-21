@@ -108,7 +108,7 @@
           };
         },
         async tableDogs(){
-          const res = await fetch('https://dog.ceo/api/breeds/image/random');
+          const res = await fetch('/api/dogs');
           const dogs = await res.json();
 
           for (const dog of dogs){
