@@ -12,7 +12,8 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/dogsname', async(req, res) => {
-  
+  const userid = req.session.user?.user_id:
+  if(!userid) return res.stat
 })
 
 module.exports = router;
