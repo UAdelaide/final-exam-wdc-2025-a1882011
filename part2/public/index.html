@@ -116,6 +116,7 @@
             const imgdata = await imgres.json();
             dog.image = imgdata.message;
           }
+          this.dogs = dogs;
         }
       }
     }).mount('#app');
