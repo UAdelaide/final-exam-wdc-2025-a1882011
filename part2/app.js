@@ -3,6 +3,8 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
+//save user info
+
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
