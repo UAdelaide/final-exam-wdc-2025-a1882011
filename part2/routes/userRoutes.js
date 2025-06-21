@@ -48,7 +48,9 @@ router.post('/login', async (req, res) => {
     const user =rows[0];
     if(user){
       req.session.user = {
-        
+        user_id:user.user_id,
+        role:user.role,
+        email:user.email
       }
     }
 
