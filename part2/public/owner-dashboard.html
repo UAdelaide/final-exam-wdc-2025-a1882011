@@ -89,7 +89,11 @@
         const message = ref('');
         const error = ref('');
         //login funcion
-        async function login(email, password)
+        async function login(email, password){
+          try{
+            const res = await fetch('/api/users/login')
+          }
+        }
 
         async function loadWalks() {
           try {
