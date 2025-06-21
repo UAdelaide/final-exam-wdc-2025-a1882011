@@ -4,7 +4,9 @@ require('dotenv').config();
 
 const app = express();
 //save user info
-
+app.use(session({
+    secret: createSecretKey'
+}))
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
@@ -16,6 +18,7 @@ const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 //add dogroutes
 const dogRoutes = require('./routes/dogRoutes');
+const { createSecretKey } = require('crypto');
 
 
 app.use('/api/walks', walkRoutes);
