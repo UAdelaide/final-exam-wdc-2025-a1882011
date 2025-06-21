@@ -20,7 +20,7 @@
         <form @submit.prevent="submitWalkRequest">
           <div class="mb-3">
             <label class="form-label">Dog ID</label>
-            <!--change-->
+            <!--change dog name instead of numeric field-->
             <select class="form select" v-model="form.dog_id">
               <option v-for="dog in dogs" :value="dog.dog_id" :key="dog.dog_id">
                 {{ dog.name }}
