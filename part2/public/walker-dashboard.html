@@ -58,7 +58,7 @@
         }
         //question16
         async function getCurrentUser(){
-          const res = await fetch('/api/users/me');
+          const users = await fetch('/api/users/me');
           const user = await res.json();
           return user.user_id;
         }
