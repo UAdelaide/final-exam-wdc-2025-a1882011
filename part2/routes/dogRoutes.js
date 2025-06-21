@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 router.get('/dogsname', async(req, res) => {
   const userid = req.session.user?.user_id:
   try {
-    const [rows] = await db.query('SELECT * FROM Dogs');
+    const [rows] = await db.query('SELECT dog_id, name FROM Dogs');
     res.json(rows);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch users' });
