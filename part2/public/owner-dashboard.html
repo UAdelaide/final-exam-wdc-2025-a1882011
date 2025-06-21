@@ -135,8 +135,8 @@
         //change dog name
         const dogs = ref([]);
         async function loadDogs(){
-          const user_id = save.getitem
-          const res=await fetch('/api/dogs/dogname');
+          const user_id = save.getitem('user_id');
+          const res=await fetch('/api/dogs/dogname?');
           dogs.value = await res.json();
         }
         onMounted(() => {
