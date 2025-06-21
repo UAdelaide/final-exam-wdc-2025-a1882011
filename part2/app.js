@@ -27,7 +27,7 @@ app.use(session({
     secret:'secretkey',
     resave: false,
     saveUninitialized:true
-}))
+}));
 
 
 // Export the app instead of listening here
