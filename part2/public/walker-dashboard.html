@@ -65,12 +65,12 @@
         async function applyToWalk(requestId) {
           try {
             const walkerid = await getCurrentUser();
-            const req = await fetch(`/api/walks/${requestId}/apply`, {
+            const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ request_id: requestId, walker_id: walkerid })
             });
-            const result = await req.json();
+            const result = await res.json();
 
 
             if (!res.ok) throw new Error(result.error || 'Application failed');
