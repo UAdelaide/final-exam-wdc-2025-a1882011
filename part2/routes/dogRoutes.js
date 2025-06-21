@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
 });
 //add dog name
 router.get('/dogname', async(req, res) => {
-  const userid = req.session?.user_id;
+  const userid = req.query.user_id;
   console.log('userid from session:', userid);
 
   try{
