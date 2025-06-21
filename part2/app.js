@@ -5,7 +5,9 @@ require('dotenv').config();
 const app = express();
 //save user info
 app.use(session({
-    secret: createSecretKey'
+    secret: 'scretkey',
+    resave: false,
+    saveUn
 }))
 
 // Middleware
