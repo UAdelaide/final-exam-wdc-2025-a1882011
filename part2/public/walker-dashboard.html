@@ -56,7 +56,10 @@
             error.value = err.message;
           }
         }
-        //question16 
+        //question16
+        async function getCurrentUser(){
+          const res = await fetch('/api/users/')
+        }
         async function applyToWalk(requestId) {
           try {
             const walkerid = await getCurrentUser();
