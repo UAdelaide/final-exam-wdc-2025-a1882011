@@ -68,7 +68,7 @@
             await fetch(`/api/walkrequests/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ request_id: requestid, walker_id: walkerid })
+              body: JSON.stringify({ request_id: requestId, walker_id: walkerid })
             });
             const result = await res.json();
 
