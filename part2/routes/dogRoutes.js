@@ -10,15 +10,17 @@ router.get('/', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch users' });
   }
 });
-
-router.get('/dogsname', async(req, res) => {
+//add dog name
+router.get('/dogs/dogname', async(req, res) => {
   const userid = req.session.user?.user_id;
-  try {
-    const [rows] = await db.query('SELECT dog_id, name FROM Dogs WHERE owner_id = ?',[userid]);
+  try{
+    const[rows] = await db.query("SELECT dog_id, name FROM Dogs WHERE owner_id =?",
+      [userid]);
     res.json(rows);
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to dogs name' });
+  }catch (error) {
+    res.status(500).json({error: "Failed"});
   }
 });
+
 
 module.exports = router;
