@@ -65,7 +65,7 @@
         async function applyToWalk(requestId) {
           try {
             const walkerid = await getCurrentUser();
-            await fetch(`/api/walkrequestst/apply`, {
+            await fetch(`/api/walkerequestst/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ request_id: requestid, walker_id: walkerid })
