@@ -23,7 +23,9 @@ app.use('/api/dogs', dogRoutes);
 
 //
 const session = require('express-session');
-
+app.use(session{
+    secret:'secretkey'
+})
 
 
 // Export the app instead of listening here
