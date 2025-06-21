@@ -97,6 +97,7 @@
               body: JSON.stringify({ email, password })
             });
             localStorage.setItem('user_id', result.user.user_id);
+            window.location.href = '/owner-dashboard.html';
           }
         }
 
