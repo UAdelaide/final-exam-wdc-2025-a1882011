@@ -136,7 +136,7 @@
         const dogs = ref([]);
         async function loadDogs(){
           const user_id = save.getitem('user_id');
-          const res=await fetch('/api/dogs/dogname?user_id=${user_id}');
+          const res=await fetch(`/api/dogs/dogname?user_id=${user_id}`);
           dogs.value = await res.json();
         }
         onMounted(() => {
