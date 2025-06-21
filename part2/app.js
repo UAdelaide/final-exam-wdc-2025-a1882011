@@ -14,6 +14,8 @@ const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 //add dogroutes
 const dogRoutes = require('./routes/dogRoutes');
+//add dogsname
+await fetch('/api/dogs/dogsname');
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
