@@ -48,8 +48,10 @@ router.post('/login', async (req, res) => {
     //save login info
     if(user && user.password_hash === password){
       req.session.user = {
-        user_id
-      }
+        user_id:user.user_id,
+        role: user.role,
+        email: user.email
+            }
     }
 
     if (rows.length === 0) {
