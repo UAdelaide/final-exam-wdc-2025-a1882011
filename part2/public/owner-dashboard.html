@@ -89,18 +89,6 @@
         const message = ref('');
         const error = ref('');
         //login funcion
-        async function login(email, password){
-          try{
-            const res = await fetch('/api/users/login',{
-              method:'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ email, password })
-            });
-            localStorage.setItem('user_id', result.user.user_id);
-            window.location.href = '/owner-dashboard.html';
-          }
-        }
-
         async function loadWalks() {
           try {
             const res = await fetch('/api/walks');
