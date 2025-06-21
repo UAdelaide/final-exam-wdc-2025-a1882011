@@ -45,7 +45,6 @@ router.post('/login', async (req, res) => {
       WHERE email = ? AND password_hash = ?
     `, [email, password]);
     //save userid info
-    const user =rows[0];
     if(user){
       req.session.user = {
         user_id:user.user_id,
